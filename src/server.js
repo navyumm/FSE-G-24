@@ -2,10 +2,12 @@ require("dotenv").config();
 const app = require("./app");
 const db = require("./models");
 
+const PORT = process.env.PORT || 8000
+
 db.sequelize.sync({alter: true}).then(() => {
   console.log("Database connect successfully");
 
-  app.listen(process.env.PORT || 8000, () => {
+  app.listen( PORT, () => {
     console.log(`server is rinning at port :  ${PORT}`);
   });
 });

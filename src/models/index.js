@@ -5,4 +5,4 @@ const db = {}
 db.sequelize = sequelize;
 db.User = User;
 
-module.export = db;
+module.exports = db;
